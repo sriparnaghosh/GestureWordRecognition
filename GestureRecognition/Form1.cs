@@ -110,8 +110,8 @@ namespace GestureRecognition
                     foreach (string filename in filenames)
                     {
                         featureVector = processImage(filename);
-                        Bitmap testimage = new Bitmap(filename);
-                        pictureBox1.Image = testimage;
+                        //Bitmap testimage = new Bitmap(filename);
+                        //pictureBox1.Image = testimage;
                         Listofvectors.Add(featureVector);
                     }
 
@@ -147,8 +147,8 @@ namespace GestureRecognition
                 Bitmap bmplocal = new Bitmap(file);
                 int height = 300, width = 300;
                 bmp = new Bitmap(bmplocal, width, height);
-                pictureBox1.Image = new Bitmap(bmp);
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                //pictureBox1.Image = new Bitmap(bmp);
+                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 using (bmp)
                 using (skinBmp = new Bitmap(bmp.Width, bmp.Height))
                 {
@@ -259,6 +259,9 @@ namespace GestureRecognition
 
         return featureVectorNorm;
 
-        }//end of processimage()
+        }
+
+    
+      //end of processimage()
     } //end of class
 }// end of namespace
